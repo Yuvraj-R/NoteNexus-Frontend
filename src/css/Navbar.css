@@ -1,0 +1,113 @@
+.navbar {
+  background-color: white;
+  padding: 3rem 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Evenly space out the left, center, and right sections */
+}
+
+/* Add media query to reduce padding and stack items on smaller screens */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 4rem 1.5rem;
+  }
+
+  .navbar-center {
+    gap: 2rem; /* Reduce gap between links on medium screens */
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-link {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-link {
+    display: none;
+  }
+  .navbar-left, .navbar-right {
+    margin-bottom: 1rem;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-cta-button {
+    width: 100%; /* Full width button on mobile */
+    text-align: center;
+  }
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-home-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit; /* Inherit color of text */
+}
+
+.navbar-logo {
+  height: 2.5rem;
+  border-radius: 15%;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: -.04em;
+  font-weight: bold;
+  color: #000;
+  margin-left: 0.5rem;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 3rem;
+  padding-left: 3rem;
+  padding-top: 0.3rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push to the right side */
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #4A4A4A;
+  font-size: 1.25rem;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.2rem 0.5rem;
+}
+
+.navbar-link:hover {
+  color: #2f69f3;
+  box-shadow: 0 4px 8px rgba(47, 105, 243, 0.3);
+  border-radius: 5px;
+}
+
+.navbar-cta-button {
+  background-color: #2f69f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-cta-button:hover {
+  background-color: #4479f4;
+}

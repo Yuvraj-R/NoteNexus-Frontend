@@ -12,10 +12,10 @@ export default function Navbar({ isSignedIn }) {
       </div>
       <div className="navbar-center">
         {/* Navigation Links */}
-        <a href="#features" className="navbar-link">
+        <a href="#platform" className="navbar-link">
           Platform
         </a>
-        <a href="#pricing" className="navbar-link">
+        <a href="#demo" className="navbar-link">
           Try it!
         </a>
       </div>
