@@ -1,4 +1,5 @@
 import "../css/Navbar.css";
+import { handleGetStartedClick, signOutUser } from "../utils/navigationUtils"; // Import the utility functions
 
 export default function Navbar({ isSignedIn }) {
   return (
@@ -21,7 +22,12 @@ export default function Navbar({ isSignedIn }) {
       </div>
       <div className="navbar-right">
         {/* Call-to-action Button */}
-        <button className="navbar-cta-button">Get Started</button>
+        <button
+          className="navbar-cta-button"
+          onClick={isSignedIn ? signOutUser : () => handleGetStartedClick(isSignedIn)}
+        >
+          {isSignedIn ? "Sign Out" : "Get Started"}
+        </button>
       </div>
     </div>
   );

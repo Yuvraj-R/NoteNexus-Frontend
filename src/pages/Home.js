@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Home.css";
+import { handleGetStartedClick } from "../utils/navigationUtils"; // Import the utility function
 
 export default function Home({ isSignedIn }) {
   return (
@@ -14,7 +15,9 @@ export default function Home({ isSignedIn }) {
             Transform your conversations into actionable insights with our cutting-edge transcription and
             summarization platform.
           </p>
-          <button className="cta-button">Get Started</button>
+          <button className="cta-button" onClick={() => handleGetStartedClick(isSignedIn)}>
+            Get Started
+          </button>
         </div>
       </header>
     </div>
