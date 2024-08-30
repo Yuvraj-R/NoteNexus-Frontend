@@ -1,0 +1,104 @@
+/* Container for the entire sign-in section */
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 1rem 35%;
+}
+
+/* Header for the sign-in section */
+.signin-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2f69f3; /* Blue color */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* FirebaseUI Auth Container */
+.firebaseui-auth-container {
+  margin: 0 auto; /* Center it horizontally */
+  padding: 0rem; /* Add some padding */
+}
+
+/* FirebaseUI Container Styling */
+.firebaseui-container {
+  box-shadow: none;
+  padding: 5rem; /* Add padding inside the card */
+}
+
+/* Card styling */
+.mdl-card {
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Input fields and buttons styling */
+.firebaseui-button,
+.firebaseui-input {
+  width: 90%; /* Adjust width to account for padding */
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Buttons customization */
+.firebaseui-id-submit.firebaseui-button {
+  background-color: #2f69f3; /* Blue button */
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.firebaseui-id-submit.firebaseui-button:hover {
+  background-color: #4479f4; /* Darker blue on hover */
+}
+
+/* Styling for email input fields */
+.firebaseui-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+/* Styling for labels */
+.firebaseui-label {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 600px) {
+  .signin-container {
+    padding: 1rem 10%;
+  }
+  .signin-header {
+    font-size: 1.5rem;
+  }
+
+  .firebaseui-auth-container {
+    width: 90%; /* Make container wider on mobile */
+    padding: 1rem;
+  }
+
+  .firebaseui-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .signin-container {
+    padding: 1rem 30%;
+  }
+}

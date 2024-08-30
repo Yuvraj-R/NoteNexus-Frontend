@@ -3,22 +3,20 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import { ui, uiConfig } from "../firebaseUI";
 import { onAuthStateChanged } from "firebase/auth";
+import "../css/SignIn.css"; // Import the CSS for sign-in styling
 
 export default function SignIn() {
   const navigate = useNavigate();
 
   useEffect(() => {
     // Initialize FirebaseUI
-    ui.start("#firebaseui-auth-container", uiConfig);
+    ui.start(".signin-container", uiConfig); // Directly target the signin-container
 
     // Listen for authentication state changes
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       console.log("Auth state changed, user:", user);
       if (user) {
-        console.log("User is signed in, navigating to dashboard");
-        navigate("/dashboard");
-      } else {
-        console.log("No user is signed in");
+        navigate("/dashboard"); // Redirect to dashboard if user is signed in
       }
     });
 
@@ -27,9 +25,9 @@ export default function SignIn() {
   }, [navigate]);
 
   return (
-    <div>
-      <h1>Sign In</h1>
-      <div id="firebaseui-auth-container"></div>
+    <div className="signin-container">
+      <h1 className="signin-header">Sign In</h1>
+      {/* FirebaseUI will inject the sign-in UI into this container */}
     </div>
   );
 }
